@@ -42,7 +42,7 @@ func codeLineSum(root string, done chan bool) {
 			fmt.Printf("root: %s, panic:%#v\n", root, pan)
 		}
 
-		// waiting
+		// waiting for his children done
 		for i := 0; i < goes; i++ {
 			<-godone
 		}
